@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  labels:                    
+    created-by: venkat
 spec:
   replicas: 3
   selector:
@@ -11,6 +13,7 @@ spec:
     metadata:
       labels:
         app: nginx
+        created-by: venkat  
     spec:
       containers:
       - name: nginx
